@@ -1,0 +1,39 @@
+{
+    "name": "laravel-notification-channels/vk",
+    "description": "VK Notifications Channel for Laravel 5.3",
+    "homepage": "https://github.com/laravel-notification-channels/vk",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": ":author_name",
+            "email": "yaroslav.molchan@gmail.com",
+            "homepage": "https://molchan.me",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.6.4",
+        "illuminate/notifications": "^5.3",
+        "illuminate/support": "^5.1|^5.2|^5.3"
+    },
+    "require-dev": {
+        "mockery/mockery": "^0.9.5",
+        "phpunit/phpunit": "4.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "NotificationChannels\\Vk\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "NotificationChannels\\Vk\\Test\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit"
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
