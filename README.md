@@ -61,9 +61,25 @@ Next we need to add this token to our Laravel configurations. Create a new VK se
 ## Usage
 
 Send a basic text message to a user
-```php
-return VkMessage::create('We publish new article in our blog.')
-->to($this->user->vk_messenger_id);
+``` php
+use NotificationChannels\Vk\VkChannel;
+use NotificationChannels\Vk\VkCallMessage;
+use Illuminate\Notifications\Notification;
+
+class AccountApproved extends Notification
+{
+    public function via($notifiable)
+    {
+        return [VkChannel::class];
+    }
+
+    public function toVk($notifiable)
+    {
+        return VkMessage::create()
+            ->to(USER_ID)
+            ->content('Test message here');
+    }
+}
 ```
 
 ### Available methods
