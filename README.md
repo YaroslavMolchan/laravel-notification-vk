@@ -63,7 +63,7 @@ Next we need to add this token to our Laravel configurations. Create a new VK se
 Send a basic text message to a user
 ``` php
 use NotificationChannels\Vk\VkChannel;
-use NotificationChannels\Vk\VkCallMessage;
+use NotificationChannels\Vk\VkMessage;
 use Illuminate\Notifications\Notification;
 
 class AccountApproved extends Notification
